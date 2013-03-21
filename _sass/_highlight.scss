@@ -1,0 +1,101 @@
+// highlight styles via GitHub
+.highlight {
+  // .err {
+  //   color: $state-error-text;
+  //   background-color: $state-error-background;
+  // }
+  // .o,
+  .k, .gs, .kc, .kd, .kn, .kp, .kr, .ow {
+    font-weight: bold;
+  }
+  .cp {
+    color: #999;
+    font-weight: bold;
+  }
+  .gu {
+    color: #800080;
+    font-weight: bold;
+  }
+  .kt, .nc {
+    color: #458;
+    font-weight: bold;
+  }
+  .ne, .nf {
+    color: #900;
+    font-weight: bold;
+  }
+  .ge {
+    font-style: italic;
+  }
+  .c, .cm, .c1 {
+    color: #998;
+    font-style: italic;
+  }
+  .cs {
+    color: #999;
+    font-weight: bold;
+    font-style: italic;
+  }
+  .gd {
+    color: #000;
+    background-color: #fdd;
+  }
+  .gd .x {
+    color: #000;
+    background-color: #faa;
+  }
+  .gi {
+    color: #000;
+    background-color: #dfd;
+  }
+  .gi .x {
+    color: #000;
+    background-color: #afa;
+  }
+  .gc {
+    color: #999;
+    background-color: #eaf2f5;
+  }
+  .go {
+    color: #888;
+  }
+  .n {
+    color: #333;
+  }
+  .w {
+    color: #bbb;
+  }
+  .gr, .gt {
+    color: #a00;
+  }
+  .gh, .bp {
+    color: #999;
+  }
+  .gp, .nn {
+    color: #555;
+  }
+  .m, .mf, .mh, .mi, .mo, .il {
+    color: #099;
+  }
+  .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .s1 {
+    color: #d14;
+  }
+  .na, .no, .nv, .vc, .vg, .vi {
+    color: #008080;
+  }
+  .ni {
+    color: #800080;
+  }
+  .nb {
+    color: #0086b3;
+  }
+  .nt {
+    color: #000080;
+  }
+  .sr {
+    color: #009926;
+  }
+  .ss {
+    color: #990073;
+  }
+}

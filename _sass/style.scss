@@ -1,0 +1,150 @@
+@import 'base/variables', 'base/mixins';
+// don't support ie6~8
+@include set-legacy-ie-support();
+@import 'base/reset', 'font-faces';
+
+$line-height-half: $font-size-base * $line-height-base / 2;
+
+// IE10 Metro responsive
+@-ms-viewport {
+  width: device-width;
+}
+
+:root {
+  overflow-y: scroll;
+}
+
+html {
+  height: 100%;
+  overflow: auto;
+  background: image-url('forest.jpg') no-repeat fixed center top;
+  background-size: cover;
+}
+
+body {
+  max-width: 1200px - 20px * 2;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  padding: 0 20px;
+  background-color: rgba(#fff, 0.93);
+}
+
+pre {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  overflow: auto;
+}
+
+code {
+  margin: 0 3px;
+  padding: 2px 4px;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+  // background-color: #f7f7f9;
+  // background-color: rgba(#f7f7f9, 0.9);
+  color: #c7254e;
+  font-size: $font-size-small;
+  white-space: nowrap;
+
+  h2 &, h3 &, h4 &,
+  pre & {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font-size: inherit;
+    white-space: pre;
+  }
+}
+
+.entry {
+  @include clearfix;
+  padding-top: 30px;
+  border-bottom: 1px dashed #ddd;
+
+  @for $i from 2 through 4 {
+    h#{$i} {
+      font-size: $font-size-large + (3 - $i) * 4;
+    }
+  }
+
+  h2 {
+    padding-top: $line-height-half;
+  }
+
+  #{headings(2, 4)},
+  ol, ul, p, pre {
+    margin-bottom: $line-height-half;
+  }
+
+  ol, ul {
+    margin-left: 25px;
+
+    ol, ul {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    ul {
+      list-style: circle;
+    }
+  }
+
+  ol {
+    list-style: decimal;
+  }
+  ul {
+    list-style: disc;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.entry-title {
+  font: {
+    family: SecretTypewriterRegular, $font-family-base;
+    size: 32px;
+  }
+  line-height: normal;
+  text-shadow: 1px 1px 3px rgba(#000, 0.3);
+
+  a {
+    color: $text-color;
+    @include transition(color 0.5s ease-out);
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
+
+.entry-meta {
+  padding-top: 5px;
+  color: $brand-grey-light;
+  font-size: $font-size-small;
+}
+
+// [class*=' icon-'],
+[class^='icon-'] {
+  &::before {
+    display: inline-block;
+    margin-right: 5px;
+    font: {
+      family: FontAwesome;
+      weight: normal;
+      style: normal;
+    }
+    -webkit-font-smoothing: antialiased;
+  }
+}
+.icon-time::before {
+  content: '\f017';
+}
+
+@import 'highlight';

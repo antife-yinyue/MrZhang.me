@@ -1,0 +1,48 @@
+# ---------------------- #
+#      Site Configs      #
+# ---------------------- #
+
+author: wǒ_is神仙
+title: MrZhang.me
+url: http://mrzhang.me
+permalink: /blog/:title.html
+paginate: 10
+paginate_path: /page/:num
+
+
+# ---------------------- #
+#         Jekyll         #
+# ---------------------- #
+
+safe: true
+markdown: redcarpet
+exclude: ['Gemfile', 'Gemfile.lock']
+
+
+# ---------------------- #
+#      Compile Sass      #
+# ---------------------- #
+
+# run `compass help compile` in terminal to find more available options
+compile:
+  no_line_comments: true
+  sass_dir: _sass
+  # output_style: compressed
+
+
+# ---------------------- #
+#       Deployment       #
+# ---------------------- #
+
+deploy:
+  repository: git@github.com:jsw0528/MrZhang.me.git
+  branch: gh-pages
+
+
+# ---------------------- #
+#    Social Networks     #
+# ---------------------- #
+
+duoshuo: jsw0528
+
+google_analytics: UA-16622252-5
