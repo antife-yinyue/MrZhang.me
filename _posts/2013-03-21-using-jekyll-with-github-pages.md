@@ -20,7 +20,7 @@ Jekyll 是跑在 [Ruby](http://www.ruby-lang.org) 上的，所以你得先确保
 $ gem install bundler
 ```
 
-安装完 Jekyll 和 Bundler，接着{{ jekyll_cli }}上场：
+接着{{ jekyll_cli }}上场，新建项目很简单：
 
 ```bash
 $ j new path/to/blog
@@ -39,7 +39,7 @@ $ j new path/to/blog
 `-- index.html
 ```
 
-该命令会自动执行`bundle install`，如果想稍后手动执行，请使用：
+执行`j new`命令后会自动执行`bundle install`，如果想稍后手动安装 gems，请使用：
 
 ```bash
 $ j new path/to/blog --no-bundle
@@ -49,7 +49,7 @@ $ j new path/to/blog --no-bundle
 
 ## 本地预览
 
-`_posts/` 目录是存放文章物理文件的地方，你可以按照约定格式`YEAR-MONTH-DAY-title.MARKUP`手动创建文件，或者使用{{ jekyll_cli }}：
+`_posts/` 目录是存放文章源文件的地方，你可以按照约定格式`YEAR-MONTH-DAY-title.MARKUP`手动创建文件，或者使用{{ jekyll_cli }}：
 
 ```bash
 $ cd path/to/blog
@@ -68,7 +68,7 @@ $ j watch
 $ j watch --open
 ```
 
-本地服务跑起来之后，Jekyll 会自动创建`_site/`目录，把`blog`目录内__不是__以下划线开头的文件（夹）全部 Copy 进来，Markdown 文件也会编译成 HTML。
+本地服务跑起来之后，Jekyll 会自动创建`_site/`目录，把`blog/`目录内__不是__以下划线开头的文件（夹）全部 Copy 进来，Markdown 文件也会编译成 HTML。
 
 在`Gemfile`文件内，有一行代码`gem 'redcarpet'`，这个 gem 是编译 Markdown 用的，[GitHub 也在用](https://github.com/blog/832-rolling-out-the-redcarpet)，而且有了它还可以使用超棒的 [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown)。
 
@@ -86,7 +86,7 @@ $ j sass
 $ j sass --watch
 ```
 
-编译时使用的参数，可以在`_config.yml`中设置，具体有哪些参数可用，可以在终端执行`compass help compile`查看。在自动生成的`_config.yml`中可以看出，预设的参数和终端显示的参数有哪些区别，就是：`--`前缀去掉，然后把连字符`-`改成下划线`_`，如果没有参数值的，用布尔值`true`跟`false`代替。
+编译时使用的参数，可以在`_config.yml`中设置，具体有哪些参数可用，可以在终端执行`compass help compile`查看。写在`_config.yml`内的参数的格式跟终端显示的有一些区别，就是：去掉`--`前缀，然后把连字符`-`改成下划线`_`，如果没有参数值的，用布尔值`true`跟`false`代替。
 
 ## 连接 GitHub
 
@@ -106,11 +106,11 @@ $ j git
 $ j deploy
 ```
 
-该命令会将`blog`目录内的文件（夹）push 到你刚刚创建的仓库中。本地预览时生成的`_site/`目录是不需要的，建议写进`.gitignore`。
+该命令会将`blog/`目录内的文件（夹）push 到你刚刚创建的仓库中。本地预览时生成的`_site/`目录是不需要的，建议写进`.gitignore`。
 
 ### 写在最后
 
-{{ jekyll_cli }}的命令，除了`j new`，其他都需要在`blog`目录内执行。
+{{ jekyll_cli }}的命令，除了`j new`，其他都需要在`blog/`目录内执行。
 
 本文只是简单介绍，想要更深入的使用 Jekyll，需要你自己看[文档](https://github.com/mojombo/jekyll#readme)。
 
