@@ -14,10 +14,10 @@ title: Welcome to
     </p>
   </header>
 
-  {% assign content = post.content | split: '<!-- more -->' %}
-  {% assign size = content | size %}
+  {% assign fragments = post.content | split: '<!-- more -->' %}
+  {% assign size = fragments | size %}
 
-  {{ content | first }}
+  {{ fragments | first }}
 
   {% if size > 1 %}<p><a href="{{ post.url }}">继续阅读 &rarr;</a></p>{% endif %}
 </article>
