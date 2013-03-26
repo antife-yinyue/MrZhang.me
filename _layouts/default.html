@@ -11,8 +11,10 @@
     <base target="_blank" />
   </head>
 
-  <body>
+  <body{% if page.isHome %} class="home"{% endif %}>
+    {% include logo.html %}
     {{ content }}
+    {% include copyright.html %}
     {% include google-analytics.html %}
   </body>
 </html>

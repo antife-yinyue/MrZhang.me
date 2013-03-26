@@ -21,14 +21,41 @@ html {
   background-size: cover;
 }
 
+// body {
+//   max-width: 1200px - 20px * 2;
+//   margin: {
+//     left: auto;
+//     right: auto;
+//   }
+//   padding: 0 20px;
+//   background-color: rgba(#fff, 0.93);
+// }
 body {
-  max-width: 1200px - 20px * 2;
-  margin: {
-    left: auto;
-    right: auto;
+  text-align: center;
+
+  &.home .entry-title {
+    text-align: left;
   }
-  padding: 0 20px;
-  background-color: rgba(#fff, 0.93);
+
+  &:not(.home) {
+    max-width: 1200px - 20px * 2;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    padding: 0 20px;
+    background-color: rgba(#fff, 0.93);
+
+    .copyright {
+      padding-top: 30px;
+      color: inherit;
+      text-shadow: 1px 1px 2px rgba(#000, 0.5);
+
+      a {
+        color: inherit;
+      }
+    }
+  }
 }
 
 a {
@@ -51,7 +78,6 @@ code {
   padding: 2px 4px;
   border: 1px solid #e1e1e8;
   border-radius: 4px;
-  // background-color: rgba(#f7f7f9, 0.9);
   color: #c7254e;
   font-size: $font-size-small;
   white-space: nowrap;
@@ -74,10 +100,93 @@ blockquote {
   color: #777;
 }
 
+.logo {
+  padding-top: 20px;
+
+  a, img {
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 180px;
+  }
+
+  img {
+    @include animation-name(Rotate);
+    @include animation-duration(4.5s);
+    @include transition-timing-function(linear);
+    @include animation-delay(3s);
+    @include animation-iteration-count(infinite);
+    @include animation-direction(alternate);
+  }
+}
+
+.copyright {
+  clear: both;
+  padding: 60px 0 20px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(#fff, 0.8);
+
+  a {
+    color: #fff;
+  }
+
+  span {
+    padding: 0 10px;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-device-width: 320px) {
+  .copyright i {
+    display: none;
+  }
+}
+
+@include keyframes(Rotate) {
+  from {
+    @include rotate(0deg);
+  }
+  to {
+    @include rotate(360deg);
+  }
+}
+
+.entry-list {
+  li {
+    display: inline-block;
+    background-color: rgba(#fff, 0.93);
+    margin: 50px 20px 0;
+    padding: 15px 20px 10px;
+    @include transition(transform 0.1s);
+
+    &:nth-of-type(2n + 1) {
+      @include rotate(-5deg);
+    }
+
+    &:nth-of-type(2n) {
+      @include rotate(2deg);
+    }
+
+    &:nth-of-type(3n) {
+      @include rotate(6deg);
+    }
+
+    &:hover {
+      @include rotate(0deg);
+    }
+  }
+}
+
 .entry {
   @include clearfix;
   padding-top: 30px;
   border-bottom: 1px dashed #ddd;
+  text-align: left;
+
+  > header {
+    text-align: center;
+  }
 
   @for $i from 2 through 4 {
     h#{$i} {
@@ -143,9 +252,8 @@ blockquote {
   font-size: $font-size-small;
 }
 
-// [class*=' icon-'],
 [class^='icon-'] {
-  &::before {
+  &:before {
     display: inline-block;
     margin-right: 5px;
     font: {
@@ -156,7 +264,7 @@ blockquote {
     -webkit-font-smoothing: antialiased;
   }
 }
-.icon-time::before {
+.icon-time:before {
   content: '\f017';
 }
 
