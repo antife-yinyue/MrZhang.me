@@ -2,15 +2,20 @@
 layout: post
 date: 2013-03-21 12:34:37
 title: Using Jekyll with GitHub Pages
+ghbtns:
+- jekyll-cli
+- MrZhang.me
 ---
 
+{% include ghbtns.html %}
 {% assign jekyll_cli = '[`jekyll-cli`](https://github.com/jsw0528/jekyll-cli)' %}
+
 
 我不喜欢，也不擅长码字，我只是喜欢折腾。
 
 去年我用 [Octopress]({{ site.url }}/blog/blog-equals-github-plus-octopress.html)，慢慢发现，除了我自己为它写的插件，其他插件基本没用上。So，我为什么不直接用 [Jekyll](https://github.com/mojombo/jekyll#readme) 呢，还省了静态化的过程，这种琐事直接交给 GitHub 得了。而且也不需要另建分支备份源码了，一举两得啊！
 
-为了方便 You &amp; Me，我弄了个小工具{{ jekyll_cli }}，跑在 NodeJS 上。接下来我就以{{ jekyll_cli }}为引，简单介绍下如何使用 GitHub 原生支持的 Jekyll。
+为了方便 You &amp; Me，我弄了个小工具{{ jekyll_cli }}{{ ghbtns[0] }}，跑在 NodeJS 上。接下来我就以{{ jekyll_cli }}为引，简单介绍下如何使用 GitHub 原生支持的 Jekyll。
 
 ## 在本地创建一个 Jekyll 项目
 
@@ -116,6 +121,6 @@ $ j deploy
 
 你可以为你的博客[绑定自己的域名](https://help.github.com/articles/setting-up-a-custom-domain-with-pages)，还可以[自定义404页面](https://help.github.com/articles/custom-404-pages)。
 
-上面说的这些，应该不难吧？有什么没有表达清楚的地方么？你也可以研究下[我博客的源码](https://github.com/jsw0528/MrZhang.me)，或许可以给你一点点的帮助。
+上面说的这些，应该不难吧？有什么没有表达清楚的地方么？你也可以研究下[我博客的源码](https://github.com/jsw0528/MrZhang.me) {{ ghbtns[1] }}，或许可以给你一点点的帮助。
 
 有任何疑问和心得，欢迎留言交流。

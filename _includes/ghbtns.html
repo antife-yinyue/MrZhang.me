@@ -1,0 +1,5 @@
+{% for repo in page.ghbtns %}
+  {% capture ghbtns %}{{ ghbtns }}|{% include ghbtns/star.html %}{% include ghbtns/fork.html %}{% endcapture %}
+{% endfor %}
+
+{% assign ghbtns = ghbtns | remove_first: '|' | split: '|' %}
