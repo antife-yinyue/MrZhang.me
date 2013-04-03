@@ -2,10 +2,6 @@
 layout: post
 date: 2012-02-02 10:32:00
 title: Using SHJS for Jekyll
-tags:
-- Octopress
-- Plugin
-- Ruby
 ---
 
 我不想用Octopress自带的代码高亮插件，所以自己写了个插件，借助 [SHJS](http://shjs.sourceforge.net) 实现代码高亮。由于Haml的缩进问题，不得以把每行代码都用code标签包了下～

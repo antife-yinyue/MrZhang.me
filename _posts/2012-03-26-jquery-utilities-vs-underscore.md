@@ -2,9 +2,6 @@
 layout: post
 date: 2012-03-26 15:50:00
 title: jQuery Utilities vs Underscore
-tags:
-- jQuery
-- Underscore
 ---
 
 抛开其他因素，只简单比较下各方法本身。能力有限，可能会有偏颇，望不吝赐教～

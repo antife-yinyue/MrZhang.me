@@ -2,7 +2,6 @@
 layout: post
 date: 2012-08-02 13:55:00
 title: Hello, SeaJS!
-tags: SeaJS
 ---
 
 {% assign issues = 'https://github.com/seajs/seajs/issues' %}

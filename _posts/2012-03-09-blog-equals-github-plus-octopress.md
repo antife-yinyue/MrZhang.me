@@ -2,9 +2,6 @@
 layout: post
 date: 2012-03-09 18:15:00
 title: Blog = GitHub + Octopress
-tags:
-- GitHub
-- Octopress
 ---
 
 {% assign repos_url = 'https://github.com/jsw0528/octopress/blob/mrzhang_me' %}

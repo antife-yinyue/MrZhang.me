@@ -2,9 +2,6 @@
 layout: post
 date: 2012-09-27 10:33:00
 title: SPM in eDoctor
-tags:
-- SeaJS
-- SPM
 ---
 
 本文不是 SPM 的文档。
