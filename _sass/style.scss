@@ -226,6 +226,11 @@ blockquote {
   img {
     max-width: 100%;
   }
+
+  p > iframe {
+    margin-bottom: 1px;
+    vertical-align: middle;
+  }
 }
 
 .entry-title {
