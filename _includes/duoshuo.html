@@ -1,4 +1,4 @@
-{% if site.duoshuo %}
+{% if site.duoshuo and page.comment != false %}
 <div class="ds-thread" data-title="{{ page.title }}" data-image="http://tp3.sinaimg.cn/1649383490/180/5600400876/1"></div>
 <script>var duoshuoQuery = { short_name: '{{ site.duoshuo }}' }</script>
 <script src="http://static.duoshuo.com/embed.js" async="async"></script>
