@@ -1,7 +1,13 @@
 // .entry-title
-@include font-face('SecretTypewriterRegular', font-files('/fonts/typewriter.woff'));
-// .icon-xxx
-@include font-face('FontAwesome', font-files('/fonts/fontawesome.woff'));
-// jQuery.Switchable
-// @include font-face('Slackey', font-files('/fonts/slackey.woff'));
-// @include font-face('LeagueGothic', font-files('/fonts/league-gothic.woff'));
+@include font-face(
+  'SecretTypewriterRegular',
+  font-files('/fonts/veteran-typewriter/webfont.woff', '/fonts/veteran-typewriter/webfont.ttf')
+);
+
+// .icon-font-xxx
+@include font-face(
+  'fontello',
+  font-files('/fonts/fontello/webfont.woff', '/fonts/fontello/webfont.ttf')
+);
+
+// jQuery.Switchable: 'Slackey'

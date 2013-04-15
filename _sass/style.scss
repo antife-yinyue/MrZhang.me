@@ -257,20 +257,20 @@ blockquote {
   font-size: $font-size-small;
 }
 
-[class^='icon-'] {
-  &:before {
+[class^='icon-font-'] {
+  &::before {
     display: inline-block;
     margin-right: 5px;
     font: {
-      family: FontAwesome;
+      family: fontello;
       weight: normal;
       style: normal;
     }
     -webkit-font-smoothing: antialiased;
   }
 }
-.icon-time:before {
-  content: '\f017';
+.icon-font-time::before {
+  content: '\f001';
 }
 
 @import 'highlight';
