@@ -257,7 +257,7 @@ blockquote {
   font-size: $font-size-small;
 }
 
-[class^='icon-font-'] {
+[class^='iconfont-'] {
   &::before {
     display: inline-block;
     margin-right: 5px;
@@ -269,7 +269,7 @@ blockquote {
     -webkit-font-smoothing: antialiased;
   }
 }
-.icon-font-time::before {
+.iconfont-time::before {
   content: '\f001';
 }
 
