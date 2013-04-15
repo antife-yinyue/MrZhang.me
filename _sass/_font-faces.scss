@@ -1,13 +1,13 @@
 // .entry-title
 @include font-face(
   'SecretTypewriterRegular',
-  font-files('/fonts/veteran-typewriter/webfont.woff', '/fonts/veteran-typewriter/webfont.ttf')
+  font-files('veteran-typewriter/webfont.woff', 'veteran-typewriter/webfont.ttf')
 );
 
 // .iconfont-xxx
 @include font-face(
   'fontello',
-  font-files('/fonts/fontello/webfont.woff', '/fonts/fontello/webfont.ttf')
+  font-files('fontello/webfont.woff', 'fontello/webfont.ttf')
 );
 
 // jQuery.Switchable: 'Slackey'

@@ -27,6 +27,7 @@ exclude: ['Gemfile', 'Gemfile.lock']
 compile:
   no_line_comments: true
   sass_dir: _sass
+  fonts_dir: fonts
   output_style: compressed
 
 
