@@ -1,13 +1,7 @@
+$includes: woff ttf;
+
 // .entry-title
-@include font-face(
-  'SecretTypewriterRegular',
-  font-files('veteran-typewriter/webfont.woff', 'veteran-typewriter/webfont.ttf')
-);
-
+@include fonts(typewriter, SecretTypewriterRegular, $includes);
 // .iconfont-xxx
-@include font-face(
-  'fontello',
-  font-files('fontello/webfont.woff', 'fontello/webfont.ttf')
-);
-
+@include fonts(fontello, fontello, $includes);
 // jQuery.Switchable: 'Slackey'
