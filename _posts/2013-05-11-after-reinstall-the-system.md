@@ -12,19 +12,19 @@ title: 重装系统之后
 
 ## 安装 [Homebrew](http://mxcl.github.io/homebrew/)
 
-```bash
+```
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 ```
 
 ### 安装 Git, MongoDB &amp; MySQL
 
-```bash
+```
 brew install git mongodb mysql
 ```
 
 设置开机自启动[可选]：
 
-```bash
+```
 mkdir -p ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
@@ -32,13 +32,13 @@ ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
 
 ## 安装 [RVM](https://rvm.io/) &amp; [Ruby](http://www.ruby-lang.org/)
 
-```bash
+```
 curl -L https://get.rvm.io | bash -s stable --autolibs=enabled --ruby=1.9.3
 ```
 
 ## 安装 [NVM](https://github.com/creationix/nvm) &amp; [NodeJS](http://nodejs.org/)
 
-```bash
+```
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 nvm install v0.10
 ```
@@ -85,7 +85,7 @@ gem: --no-ri --no-rdoc
 
 ## 安装 [Pow](http://pow.cx/)
 
-```bash
+```
 gem install powder
 powder install
 ```
@@ -114,7 +114,7 @@ import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_p
 
 __Settings__
 
-```
+```js
 {
   "ensure_newline_at_eof_on_save": true,
   "font_size": 20.0,
