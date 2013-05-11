@@ -1,0 +1,125 @@
+---
+layout: post
+date: 2013-05-11 21:14:50
+title: 重装系统之后
+---
+
+## 更改电脑名称
+
+> 系统偏好设置 --&gt; 共享
+
+## 安装 [Xcode](http://itunes.apple.com/us/app/xcode/id497799835) &amp; [OSX GCC Installer](https://github.com/kennethreitz/osx-gcc-installer)
+
+## 安装 [Homebrew](http://mxcl.github.io/homebrew/)
+
+```bash
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+```
+
+### 安装 Git, MongoDB &amp; MySQL
+
+```bash
+brew install git mongodb mysql
+```
+
+设置开机自启动[可选]：
+
+```bash
+mkdir -p ~/Library/LaunchAgents
+ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+```
+
+## 安装 [RVM](https://rvm.io/) &amp; [Ruby](http://www.ruby-lang.org/)
+
+```bash
+curl -L https://get.rvm.io | bash -s stable --autolibs=enabled --ruby=1.9.3
+```
+
+## 安装 [NVM](https://github.com/creationix/nvm) &amp; [NodeJS](http://nodejs.org/)
+
+```bash
+curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+nvm install v0.10
+```
+
+## 编辑 /etc/paths
+
+```
+/usr/local/bin
+/usr/local/sbin
+/usr/bin
+/usr/sbin
+/bin
+/sbin
+```
+
+## 编辑 ~/.bash_profile
+
+```bash
+# Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# Load NVM
+[[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh"
+
+# export $NODE_PATH
+export NODE_PATH=$NVM_DIR/$(nvm_ls current)/lib/node_modules
+```
+
+## 编辑 ~/.gemrc
+
+```
+:backtrace: false
+:benchmark: false
+:bulk_threshold: 1000
+:sources:
+- http://ruby.taobao.org/
+:update_sources: true
+:verbose: true
+gem: --no-ri --no-rdoc
+```
+
+## 安装 [Pow](http://pow.cx/)
+
+```bash
+gem install powder
+powder install
+```
+
+## SSH-KeyGen
+
+```
+ssh-keygen -t rsa
+```
+
+## Sublime
+
+__Bin__
+
+```
+ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sm
+```
+
+__Package Control__
+
+```
+import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print('Please restart Sublime Text to finish installation')
+```
+
+__Settings__
+
+```
+{
+  "ensure_newline_at_eof_on_save": true,
+  "font_size": 20.0,
+  "highlight_line": true,
+  "line_padding_top": 5,
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true
+}
+```
