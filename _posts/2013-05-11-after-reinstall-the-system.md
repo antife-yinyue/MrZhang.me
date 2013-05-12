@@ -22,7 +22,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 brew install git mongodb mysql
 ```
 
-设置开机自启动[可选]：
+设置开机自启动「可选」：
 
 ```
 mkdir -p ~/Library/LaunchAgents
@@ -80,7 +80,7 @@ export NODE_PATH=$NVM_DIR/$(nvm_ls current)/lib/node_modules
 - http://ruby.taobao.org/
 :update_sources: true
 :verbose: true
-gem: --no-ri --no-rdoc
+gem: --no-rdoc --no-ri
 ```
 
 ## 安装 [Pow](http://pow.cx/)
