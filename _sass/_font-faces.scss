@@ -1,5 +1,7 @@
 $includes: woff ttf;
+
 // .entry-title
 @include fonts(typewriter, SecretTypewriterRegular, $includes);
 // .iconfont-xxx
 @include fonts(fontello, fontello, $includes);
+// jQuery.Switchable: 'Slackey'
