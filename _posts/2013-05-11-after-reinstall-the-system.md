@@ -125,3 +125,18 @@ __Settings__
   "trim_trailing_white_space_on_save": true
 }
 ```
+
+__Key Bindings__
+
+```js
+[
+  // Add folder to project
+  { "keys": ["super+shift+o"], "command": "prompt_add_folder" },
+  // Match with `ctrl+shift+k`
+  { "keys": ["ctrl+shift+d"], "command": "duplicate_line" },
+  { "keys": ["alt+up", "alt+1"], "command": "fold_by_level", "args": {"level": 1} },
+  { "keys": ["alt+up", "alt+2"], "command": "fold_by_level", "args": {"level": 2} },
+  { "keys": ["alt+up", "alt+3"], "command": "fold_by_level", "args": {"level": 3} },
+  { "keys": ["alt+down"], "command": "unfold_all" }
+]
+```
