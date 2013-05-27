@@ -67,7 +67,7 @@ $ j post '文章标题'
 $ j watch
 ```
 
-默认端口号是`4000`，当然你可以在`_config.yml`中设置`server_port: 1234`。{{ jekyll_cli }}有个贴心功能，就是使用默认浏览器自动打开本地预览地址：
+默认端口号是`4000`，当然你可以在`_config.yml`中设置`port: 1234`。{{ jekyll_cli }}有个贴心功能，就是使用默认浏览器自动打开本地预览地址：
 
 ```bash
 $ j watch --open
