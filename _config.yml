@@ -3,11 +3,12 @@
 # ---------------------- #
 
 author: wǒ_is神仙
-title: MrZhang.me
+name: MrZhang.me
 url: http://mrzhang.me
 permalink: /blog/:title.html
 paginate: 10
 paginate_path: /page/:num
+excerpt_separator: '<!-- more -->'
 
 
 # ---------------------- #
@@ -17,6 +18,8 @@ paginate_path: /page/:num
 safe: true
 markdown: redcarpet
 exclude: ['Gemfile', 'Gemfile.lock']
+relative_permalinks: true
+timezone: Asia/Shanghai
 
 
 # ---------------------- #
@@ -24,7 +27,7 @@ exclude: ['Gemfile', 'Gemfile.lock']
 # ---------------------- #
 
 # run `compass help compile` in terminal to find more available options
-compile:
+sass:
   no_line_comments: true
   sass_dir: _sass
   fonts_dir: fonts
