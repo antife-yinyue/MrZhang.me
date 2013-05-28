@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2013-03-21 12:34:37
+date: 2013-05-28 08:00:00
 title: Using Jekyll with GitHub Pages
 ghbtns:
 - jekyll-cli
@@ -67,7 +67,19 @@ $ j post '文章标题'
 $ j watch
 ```
 
-默认端口号是`4000`，当然你可以在`_config.yml`中设置`port: 1234`。{{ jekyll_cli }}有个贴心功能，就是使用默认浏览器自动打开本地预览地址：
+默认端口号是`4000`，当然你可以在`_config.yml`中设置`port: 8080`，或者直接使用命令行：
+
+```bash
+$ j watch --port 8080
+```
+
+默认情况下，render posts 的时候，会把`_drafts/`目录内的草稿也包含进去，但你可以手动排除：
+
+```bash
+$ j watch --no-drafts
+```
+
+{{ jekyll_cli }}有个贴心功能，就是使用默认浏览器自动打开本地预览地址：
 
 ```bash
 $ j watch --open
@@ -116,6 +128,8 @@ $ j deploy
 ### 写在最后
 
 {{ jekyll_cli }}的命令，除了`j new`，其他都需要在`blog/`目录内执行。
+
+更多命令可以运行`j -h`查看。列出某个命令所有 options，使用`j [command] -h`，比如`j post -h`。
 
 本文只是简单介绍，想要更深入的使用 Jekyll，需要你自己看[文档](http://jekyllrb.com/docs/home/)。
 
