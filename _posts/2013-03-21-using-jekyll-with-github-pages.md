@@ -52,7 +52,7 @@ $ j new path/to/blog --no-bundle
 
 <!-- more -->
 
-## 本地预览
+## 创建文章
 
 `_posts/` 目录是存放文章源文件的地方，你可以按照约定格式`YEAR-MONTH-DAY-title.MARKUP`手动创建文件，或者使用{{ jekyll_cli }}：
 
@@ -61,7 +61,19 @@ $ cd path/to/blog
 $ j post '文章标题'
 ```
 
-然后用你喜欢的编辑器（比如 Sublime Text）打开它，码字。码字的同时，希望可以先在本地预览，那么就需要在本地起个服务了：
+你可以指定文件后缀名：
+
+```bash
+$ j post '文章标题' --ext html
+```
+
+或者作为草稿（Jekyll v1.x 新增功能）：
+
+```bash
+$ j post '文章标题' --drafts
+```
+
+## 本地预览
 
 ```bash
 $ j watch
