@@ -1,17 +1,12 @@
 {
   "name": "",
+  "css_prefix_text": "iconfont-",
+  "css_use_suffix": false,
   "glyphs": [
     {
-      "search": [
-        "clock",
-        "time"
-      ],
-      "code": 61441,
-      "from": 128340,
       "uid": "0ohst63cgq1mf1syayvfl8mphms8dbes",
-      "css": "font-time",
-      "orig_css": "clock",
-      "orig_code": 61441,
+      "css": "time",
+      "code": 59392,
       "src": "modernpics"
     }
   ]
