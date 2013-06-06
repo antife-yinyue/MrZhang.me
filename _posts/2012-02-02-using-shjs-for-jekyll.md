@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2012-02-02 10:32:00
+date: 2012-02-02 10:32:00 +0800
 title: Using SHJS for Jekyll
 ---
 

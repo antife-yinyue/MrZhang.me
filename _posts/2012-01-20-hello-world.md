@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2012-01-20 19:22:00
+date: 2012-01-20 19:22:00 +0800
 title: Hello World
 ---
 

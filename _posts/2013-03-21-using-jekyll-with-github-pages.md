@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2013-05-28 08:00:00
+date: 2013-05-28 08:00:00 +0800
 title: Using Jekyll with GitHub Pages
 ghbtns:
 - jekyll-cli

@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2012-08-02 13:55:00
+date: 2012-08-02 13:55:00 +0800
 title: Hello, SeaJS!
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2012-09-27 10:33:00
+date: 2012-09-27 10:33:00 +0800
 title: SPM in eDoctor
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2012-03-26 15:50:00
+date: 2012-03-26 15:50:00 +0800
 title: jQuery Utilities vs Underscore
 ---
 

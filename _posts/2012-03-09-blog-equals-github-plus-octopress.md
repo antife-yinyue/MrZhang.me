@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2012-03-09 18:15:00
+date: 2012-03-09 18:15:00 +0800
 title: Blog = GitHub + Octopress
 ---
 
