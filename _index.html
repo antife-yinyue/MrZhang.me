@@ -5,7 +5,7 @@ isHome: true
 ---
 
 {% for post in paginator.posts %}
-<article class="entry" id="{{ post.id }}">
+<article class="entry">
   <header>
     <h1 class="entry-title">
       <a href="{{ post.url }}">{{ post.title }}</a>
@@ -15,7 +15,7 @@ isHome: true
     </p>
   </header>
 
-  {% assign fragments = post.content | split: '<!-- more -->' %}
+  {% assign fragments = post.content | split: site.excerpt_separator %}
   {% assign size = fragments | size %}
 
   {{ fragments | first }}
