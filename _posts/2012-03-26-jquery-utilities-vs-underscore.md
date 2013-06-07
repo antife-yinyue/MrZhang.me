@@ -28,19 +28,19 @@ var obj1 = {
 }
 var obj2 = {
   site: {
-    weibo: 'http://weibo.com/{{ site.sina_weibo_id }}'
+    weibo: 'http://weibo.com/{{ site.weibo.username }}'
   }
 }
 
 console.log( _.extend({}, obj1, obj2) )
-//=> { name: '{{ site.author }}', site: { weibo: 'http://weibo.com/{{ site.sina_weibo_id }}' } }
+//=> { name: '{{ site.author }}', site: { weibo: 'http://weibo.com/{{ site.weibo.username }}' } }
 
 console.log( $.extend({}, obj1, obj2) )
-//=> { name: '{{ site.author }}', site: { weibo: 'http://weibo.com/{{ site.sina_weibo_id }}' } }
+//=> { name: '{{ site.author }}', site: { weibo: 'http://weibo.com/{{ site.weibo.username }}' } }
 
 // 深度合并
 console.log( $.extend(true, {}, obj1, obj2) )
-//=> { name: '{{ site.author }}', site: { blog: 'http://MrZhang.me', engine: 'GitHub + Octopress', weibo: 'http://weibo.com/{{ site.sina_weibo_id }}' } }
+//=> { name: '{{ site.author }}', site: { blog: 'http://MrZhang.me', engine: 'GitHub + Octopress', weibo: 'http://weibo.com/{{ site.weibo.username }}' } }
 ```
 
 <!-- more -->

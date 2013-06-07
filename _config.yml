@@ -6,7 +6,7 @@ author: wǒ_is神仙
 name: MrZhang.me
 url: http://mrzhang.me
 permalink: /blog/:title.html
-paginate: 10
+paginate: 5
 paginate_path: /page/:num
 excerpt_separator: '<!-- more -->'
 
@@ -18,7 +18,6 @@ excerpt_separator: '<!-- more -->'
 safe: true
 markdown: redcarpet
 exclude: ['Gemfile', 'Gemfile.lock']
-relative_permalinks: true
 timezone: Asia/Shanghai
 
 
@@ -46,6 +45,11 @@ deploy:
 # ---------------------- #
 #    Social Networks     #
 # ---------------------- #
+
+weibo:
+  username: jsw0528
+#   uid:
+#   appkey:
 
 github: jsw0528
 
