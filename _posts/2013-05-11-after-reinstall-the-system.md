@@ -96,6 +96,8 @@ powder install
 ssh-keygen -t rsa
 ```
 
+<a id="sm"></a>
+
 ## [Sublime Text 3](http://www.sublimetext.com/3)
 
 __Bin__
