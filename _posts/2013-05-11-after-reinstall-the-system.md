@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2013-05-11 21:14:50 +0800
+date: 2013-06-29 13:24:37 +0800
 title: 重装系统之后
 ---
 
@@ -96,21 +96,30 @@ powder install
 ssh-keygen -t rsa
 ```
 
-## Sublime
+## [Sublime Text 3](http://www.sublimetext.com/3)
 
 __Bin__
 
 ```
-ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sm
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sm
 ```
 
-[__Package Control__](http://wbond.net/sublime_packages/package_control/installation)
+[__Package Control__](http://wbond.net/sublime_packages/package_control/installation#ST3)
 
-按快捷键<code>ctrl + `</code>打开控制台，运行下面的代码后重新打开 Sublime。
+```
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
+git clone https://github.com/wbond/sublime_package_control.git 'Package Control'
+cd 'Package Control'
+git checkout python3
+```
+
+<!--
+按快捷键<code>ctrl + `</code>打开控制台，运行下面的代码后重新打开 Sublime Text 2。
 
 ```
 import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print('Please restart Sublime Text to finish installation')
 ```
+-->
 
 __Settings__
 
@@ -140,3 +149,7 @@ __Key Bindings__
   { "keys": ["alt+down"], "command": "unfold_all" }
 ]
 ```
+
+__Snippets__ - [Download](https://gist.github.com/jsw0528/5889931/download)
+
+{% gist 5889931 %}
