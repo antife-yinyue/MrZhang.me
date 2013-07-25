@@ -74,6 +74,9 @@ PATH=$PATH:$HOME/.rvm/bin
 export NODE_PATH=$NVM_DIR/$(nvm_ls current)/lib/node_modules
 
 alias ls="ls -lap"
+alias pr="powder restart"
+alias po="powder open"
+alias pl="powder applog"
 ```
 
 ## 编辑 ~/.gemrc
