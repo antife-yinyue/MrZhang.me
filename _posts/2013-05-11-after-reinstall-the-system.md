@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2013-07-25 15:18:37 +0800
+date: 2013-07-25 16:17:37 +0800
 title: 重装系统之后
 ---
 
@@ -62,9 +62,9 @@ nvm install v0.10
 
 ## 编辑 ~/.zshrc
 
-```sh
-plugins=(git bundler autojump osx)
+> __plugins=([autojump](https://github.com/joelthelion/autojump#readme) [bundler](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#bundler) [git](http://jasonm23.github.io/oh-my-git-aliases.html) [osx](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#osx) [rails3](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#rails3))__
 
+```sh
 # Customize to your needs...
 PATH=$PATH:$HOME/.rvm/bin
 
