@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2013-06-29 13:24:37 +0800
+date: 2013-07-25 15:18:37 +0800
 title: 重装系统之后
 ---
 
@@ -16,10 +16,10 @@ title: 重装系统之后
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 ```
 
-### 安装 Git, MongoDB &amp; MySQL
+### 安装 Git, MongoDB, MySQL &amp; Autojump
 
 ```
-brew install git mongodb mysql
+brew install git mongodb mysql autojump
 ```
 
 设置开机自启动「可选」：
@@ -28,6 +28,12 @@ brew install git mongodb mysql
 mkdir -p ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+```
+
+## 安装 [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+```
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 ```
 
 ## 安装 [RVM](https://rvm.io/) &amp; [Ruby](http://www.ruby-lang.org/)
@@ -54,20 +60,20 @@ nvm install v0.10
 /sbin
 ```
 
-## 编辑 ~/.bash_profile
+## 编辑 ~/.zshrc
 
-```bash
-# Add RVM to PATH for scripting
+```sh
+plugins=(git bundler autojump osx)
+
+# Customize to your needs...
 PATH=$PATH:$HOME/.rvm/bin
 
-# Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-# Load NVM
 [[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh"
 
-# export $NODE_PATH
 export NODE_PATH=$NVM_DIR/$(nvm_ls current)/lib/node_modules
+
+alias ls="ls -lap"
 ```
 
 ## 编辑 ~/.gemrc
@@ -114,14 +120,6 @@ git clone https://github.com/wbond/sublime_package_control.git 'Package Control'
 cd 'Package Control'
 git checkout python3
 ```
-
-<!--
-按快捷键<code>ctrl + `</code>打开控制台，运行下面的代码后重新打开 Sublime Text 2。
-
-```
-import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print('Please restart Sublime Text to finish installation')
-```
--->
 
 __Settings__
 
