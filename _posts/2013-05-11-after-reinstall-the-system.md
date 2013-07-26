@@ -10,7 +10,7 @@ title: 重装系统之后
 
 ## 安装 [Xcode](http://itunes.apple.com/us/app/xcode/id497799835) &amp; [OSX GCC Installer](https://github.com/kennethreitz/osx-gcc-installer)
 
-## 安装 [Homebrew](http://mxcl.github.io/homebrew/)
+## 安装 [Homebrew](http://brew.sh/)
 
 ```
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
