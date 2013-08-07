@@ -1,17 +1,33 @@
-@import 'base/variables', 'base/mixins';
-// don't support ie6~8
-@include set-legacy-ie-support();
-@import 'base/reset', 'font-faces';
+// Private variables
+$font-size-base:    16px;
+$font-size-large:   round($font-size-base * 1.25);
+$font-size-small:   round($font-size-base * 0.85);
+$line-height-base:  1.75;
+$line-height-half:  $font-size-base * $line-height-base / 2;
+$code-colors:       #c7254e transparent #e1e1e8;
+$pre-colors:        inherit transparent #ccc;
 
-$line-height-half: $font-size-base * $line-height-base / 2;
+// Core Variables and Mixins
+@import 'base/variables', 'base/mixins';
+
+// Adjust browser support
+@include support($legacy-ie: false, $legacy-webkit: false, $legacy-moz: false);
+
+// Reset
+@import 'base/reset';
+
+// Utility classes
+@import 'base/placeholders', 'base/utilities';
+
+// .entry-title
+@include font-face(typewriter, SecretTypewriterRegular, $includes: woff ttf);
+// .iconfont-xxx
+@include font-face(fontello, $includes: woff ttf);
+
 
 // IE10 Metro responsive
 @-ms-viewport {
   width: device-width;
-}
-
-:root {
-  overflow-y: scroll;
 }
 
 html {
@@ -57,31 +73,11 @@ a {
   }
 }
 
-pre {
-  padding: 6px 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  overflow: auto;
-}
+@import 'base/codes';
 
-code {
-  margin: 0 3px;
-  padding: 2px 4px;
-  border: 1px solid #e1e1e8;
-  border-radius: 4px;
-  color: #c7254e;
-  font-size: $font-size-small;
-  white-space: nowrap;
-
-  h2 &, h3 &, h4 &,
-  pre & {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: none;
-    color: inherit;
-    font-size: inherit;
-    white-space: pre;
+#{headings()} {
+  code {
+    @extend %clean-code-styles;
   }
 }
 
@@ -103,7 +99,7 @@ blockquote {
   }
 
   img {
-    @include animation-name(Rotate);
+    @include animation-name(Spin);
     @include animation-duration(4.5s);
     @include transition-timing-function(linear);
     @include animation-delay(3s);
@@ -134,7 +130,7 @@ blockquote {
   }
 }
 
-@include keyframes(Rotate) {
+@include keyframes(Spin) {
   from {
     @include rotate(0deg);
   }
@@ -170,7 +166,7 @@ blockquote {
 }
 
 .entry {
-  @include clearfix;
+  @extend %clearfix;
   padding-top: 30px;
   border-bottom: 1px dashed #ddd;
   text-align: left;
@@ -237,14 +233,14 @@ blockquote {
     @include transition(color 0.5s ease-out);
 
     &:hover {
-      color: $link-color;
+      color: nth($link-colors, 1);
     }
   }
 }
 
 .entry-meta {
   padding-top: 5px;
-  color: $brand-light-grey;
+  color: #999;
   font-size: $font-size-small;
 }
 

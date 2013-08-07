@@ -2,6 +2,7 @@
   "name": "",
   "css_prefix_text": "iconfont-",
   "css_use_suffix": false,
+  "hinting": true,
   "glyphs": [
     {
       "uid": "0ohst63cgq1mf1syayvfl8mphms8dbes",
