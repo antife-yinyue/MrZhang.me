@@ -4,6 +4,7 @@ $font-size-large:   round($font-size-base * 1.25);
 $font-size-small:   round($font-size-base * 0.85);
 $line-height-base:  1.75;
 $line-height-half:  $font-size-base * $line-height-base / 2;
+$body-bg-color:     transparent;
 $code-colors:       #c7254e transparent #e1e1e8;
 $pre-colors:        inherit transparent #ccc;
 
