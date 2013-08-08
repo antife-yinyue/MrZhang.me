@@ -6,9 +6,8 @@ author: wǒ_is神仙
 name: MrZhang.me
 url: http://mrzhang.me
 permalink: blog/:title.html
-relative_permalinks: false
 # paginate: 5
-# paginate_path: page-:num
+# paginate_path: page/:num
 excerpt_separator: '<!-- more -->'
 
 
@@ -28,9 +27,9 @@ timezone: Asia/Shanghai
 
 # run `compass help compile` in terminal to find more available options
 sass:
-  no_line_comments: true
   sass_dir: _sass
   fonts_dir: fonts
+  debug_info: true
   output_style: compressed
 
 
