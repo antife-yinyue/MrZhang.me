@@ -66,17 +66,15 @@ body {
   }
 }
 
-a {
-  &:hover, &:focus {
-    > code {
-      color: inherit;
-    }
+a:hover {
+  > code {
+    color: inherit;
   }
 }
 
 @import 'base/codes';
 
-#{headings()} {
+#{headings(2, 4)} {
   code {
     @extend %clean-code-styles;
   }
@@ -109,6 +107,15 @@ blockquote {
   }
 }
 
+@include keyframes(Spin) {
+  from {
+    @include rotate(0deg);
+  }
+  to {
+    @include rotate(360deg);
+  }
+}
+
 .copyright {
   clear: both;
   padding: 60px 0 20px;
@@ -128,15 +135,6 @@ blockquote {
 @media screen and (max-device-width: 320px) {
   .copyright i {
     display: none;
-  }
-}
-
-@include keyframes(Spin) {
-  from {
-    @include rotate(0deg);
-  }
-  to {
-    @include rotate(360deg);
   }
 }
 
