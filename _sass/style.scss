@@ -193,8 +193,10 @@ blockquote {
     margin-left: 25px;
 
     ol, ul {
-      margin-top: 0;
-      margin-bottom: 0;
+      margin: {
+        top: 0;
+        bottom: 0;
+      }
     }
 
     ul {

@@ -115,13 +115,10 @@ __Bin__
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sm
 ```
 
-[__Package Control__](http://wbond.net/sublime_packages/package_control/installation#ST3)
+[__Package Control__](https://sublime.wbond.net/)
 
 ```
-cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
-git clone https://github.com/wbond/sublime_package_control.git 'Package Control'
-cd 'Package Control'
-git checkout python3
+import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
 ```
 
 __Settings__
