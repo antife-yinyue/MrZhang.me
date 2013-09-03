@@ -1,3 +1,5 @@
+@charset 'UTF-8';
+
 // Private variables
 $font-size-base:    16px;
 $font-size-large:   round($font-size-base * 1.25);
@@ -8,17 +10,17 @@ $body-bg-color:     transparent;
 $code-colors:       #c7254e transparent #e1e1e8;
 $pre-colors:        inherit transparent #ccc;
 
-// Core Variables and Mixins
+// Core Variables & Mixins
 @import 'base/variables', 'base/mixins';
 
-// Adjust browser support
+// Adjust Browser Support
 @include support($legacy-ie: false, $legacy-webkit: false, $legacy-moz: false);
 
 // Reset
 @import 'base/reset';
 
-// Utility classes
-@import 'base/placeholders', 'base/utilities';
+// Helper Classes & Placeholder Selectors
+@import 'base/helpers', 'base/placeholders';
 
 // .entry-title
 @include font-face(typewriter, SecretTypewriterRegular, $includes: woff ttf);
