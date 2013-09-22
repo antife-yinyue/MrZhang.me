@@ -2,7 +2,7 @@
 <!-- Pagination -->
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="/{{ paginator.previous_page_path }}" target="_self">&laquo; Prev</a>
+    <a href="{{ paginator.previous_page_path }}" target="_self">&laquo; Prev</a>
   {% else %}
     <span>&laquo; Prev</span>
   {% endif %}
@@ -11,12 +11,12 @@
     {% if page == paginator.page %}
       <em>{{ page }}</em>
     {% else %}
-      <a href="/{% if page > 1 %}{{ site.paginate_path | replace: ':num', page }}{% endif %}" target="_self">{{ page }}</a>
+      <a href="{% if page == 1 %}/index.html{% else %}{{ site.paginate_path | replace: ':num', page }}{% endif %}" target="_self">{{ page }}</a>
     {% endif %}
   {% endfor %}
 
   {% if paginator.next_page %}
-    <a href="/{{ paginator.next_page_path }}" target="_self">Next &raquo;</a>
+    <a href="{{ paginator.next_page_path }}" target="_self">Next &raquo;</a>
   {% else %}
     <span>Next &raquo;</span>
   {% endif %}
