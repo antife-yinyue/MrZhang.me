@@ -4,15 +4,24 @@ title: Welcome to
 isHome: true
 ---
 
-<ul class="entry-list">
-  {% for post in site.posts %}
-  <li>
-    <h2 class="entry-title">
+{% for post in paginator.posts %}
+<article class="entry">
+  <header>
+    <h1 class="entry-title">
       <a href="{{ post.url }}" target="_self">{{ post.title }}</a>
-    </h2>
+    </h1>
     <p class="entry-meta">
       <time class="iconfont-time">{{ post.date | date: '%Y/%m/%d %A' }}</time>
     </p>
-  </li>
-  {% endfor %}
-</ul>
+  </header>
+
+  {% assign fragments = post.content | split: site.excerpt_separator %}
+  {% assign size = fragments | size %}
+
+  {{ fragments | first }}
+
+  {% if size > 1 %}<p class="read-more"><a href="{{ post.url }}">阅读全文 &rarr;</a></p>{% endif %}
+</article>
+{% endfor %}
+
+{% include pagination.html %}
