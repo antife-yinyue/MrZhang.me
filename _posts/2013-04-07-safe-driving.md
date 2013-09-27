@@ -4,6 +4,8 @@ date: 2013-04-07 14:35:19 +0800
 title: 「新车评网」安全驾驶公开课
 ---
 
+{{ site.excerpt_separator }}
+
 ## 一、安全驾驶姿势
 
 <iframe width="100%" height="500" src="http://player.youku.com/embed/XNTA3MTIwMzQ0" allowfullscreen></iframe>

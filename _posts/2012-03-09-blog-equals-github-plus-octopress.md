@@ -31,7 +31,7 @@ title: Blog = GitHub + Octopress
 
 **OK，现在让我们正式开始。**
 
-<!-- more -->
+{{ site.excerpt_separator }}
 
 ## Step1 - 在本机安装Octopress
 

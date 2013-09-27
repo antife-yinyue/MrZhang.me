@@ -50,7 +50,7 @@ $ j new path/to/blog
 $ j new path/to/blog --no-bundle
 ```
 
-<!-- more -->
+{{ site.excerpt_separator }}
 
 ## 创建文章
 

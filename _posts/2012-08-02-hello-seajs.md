@@ -45,7 +45,7 @@ seajs.use(['./hello', './world'], function(hello, world) {
 
 你应该已经注意到，被加载的模块文件都没带后缀，那是因为 SeaJS 默认会给没有指定后缀的自动补上`.js`后缀。但有两种情况是不会自动添加的，一是路径以井号`#`结尾，二是路径中含有问号`?`。
 
-<!-- more -->
+{{ site.excerpt_separator }}
 
 ## 二、模块标识
 

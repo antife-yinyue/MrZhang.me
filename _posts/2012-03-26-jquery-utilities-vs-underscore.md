@@ -43,7 +43,7 @@ console.log( $.extend(true, {}, obj1, obj2) )
 //=> { name: '{{ site.author }}', site: { blog: 'http://MrZhang.me', engine: 'GitHub + Octopress', weibo: 'http://weibo.com/{{ site.weibo.username }}' } }
 ```
 
-<!-- more -->
+{{ site.excerpt_separator }}
 
 ## $.grep() vs _.filter() + _.reject()
 

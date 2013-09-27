@@ -16,7 +16,7 @@ title: SPM in eDoctor
 $ curl https://raw.github.com/eDoctor/install-nodejs-and-spm/master/install-nodejs-and-spm.sh | bash -s NODE_VERSION
 ```
 
-<!-- more -->
+{{ site.excerpt_separator }}
 
 ## JS 存放目录结构
 

@@ -16,6 +16,8 @@ title: 重装系统之后
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 ```
 
+{{ site.excerpt_separator }}
+
 ### 安装 Git, MongoDB, MySQL &amp; Autojump
 
 ```
