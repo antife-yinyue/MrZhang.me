@@ -16,8 +16,6 @@ title: 重装系统之后
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 ```
 
-{{ site.excerpt_separator }}
-
 ### 安装 Git, MongoDB, MySQL &amp; Autojump
 
 ```
@@ -31,6 +29,8 @@ mkdir -p ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
 ```
+
+{{ site.excerpt_separator }}
 
 ## 安装 [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 

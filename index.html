@@ -20,7 +20,7 @@ isHome: true
 
   {{ fragments | first }}
 
-  {% if size > 1 %}<p class="read-more"><a href="{{ post.url }}">阅读全文 &rarr;</a></p>{% endif %}
+  {% if size > 1 %}<p class="read-more"><a href="{{ post.url }}" target="_self">阅读全文 &rarr;</a></p>{% endif %}
 </article>
 {% endfor %}
 
