@@ -1,0 +1,8 @@
+{% assign logo = '<img src="http://tp3.sinaimg.cn/1649383490/180/5600400876/1" />' %}
+<header class="header">
+  {% if page.url == '/index.html' %}
+    {{ logo }}
+  {% else %}
+    <a href="/" target="_self" title="返回首页">{{ logo }}</a>
+  {% endif %}
+</header>
