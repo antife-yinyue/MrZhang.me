@@ -127,7 +127,7 @@ $ jkl git
 
 终端会提示你输入具有读写权限的仓库地址，示例地址见下图：
 
-![](/images/repo-url.png)
+![](https://github-images.s3.amazonaws.com/help/remotes-url.png)
 
 ## 部署
 
