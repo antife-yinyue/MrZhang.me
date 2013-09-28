@@ -28,7 +28,7 @@ $ gem install bundler
 接着{{ jekyll_cli }}上场，新建项目很简单：
 
 ```bash
-$ j new path/to/blog
+$ jkl new path/to/blog
 ```
 
 这样，在你指定的地方会创建一个名为`blog`的文件夹，里面包含了 Jekyll 所需的基本目录结构：
@@ -44,10 +44,10 @@ $ j new path/to/blog
 `-- index.html
 ```
 
-执行`j new`命令后会自动执行`bundle install`，如果想稍后手动安装 gems，请使用：
+执行`jkl new`命令后会自动执行`bundle install`，如果想稍后手动安装 gems，请使用：
 
 ```bash
-$ j new path/to/blog --no-bundle
+$ jkl new path/to/blog --no-bundle
 ```
 
 {{ site.excerpt_separator }}
@@ -58,43 +58,43 @@ $ j new path/to/blog --no-bundle
 
 ```bash
 $ cd path/to/blog
-$ j post '文章标题'
+$ jkl post '文章标题'
 ```
 
 你可以指定文件后缀名：
 
 ```bash
-$ j post '文章标题' --ext html
+$ jkl post '文章标题' --ext html
 ```
 
 或者作为草稿（Jekyll v1.x 新增功能）：
 
 ```bash
-$ j post '文章标题' --drafts
+$ jkl post '文章标题' --drafts
 ```
 
 ## 本地预览
 
 ```bash
-$ j watch
+$ jkl watch
 ```
 
 默认端口号是`4000`，当然你可以在`_config.yml`中设置`port: 8080`，或者直接使用命令行：
 
 ```bash
-$ j watch --port 8080
+$ jkl watch --port 8080
 ```
 
 默认情况下，render posts 的时候，会把`_drafts/`目录内的草稿也包含进去，但你可以手动排除：
 
 ```bash
-$ j watch --no-drafts
+$ jkl watch --no-drafts
 ```
 
 {{ jekyll_cli }}有个贴心功能，就是使用默认浏览器自动打开本地预览地址：
 
 ```bash
-$ j watch --open
+$ jkl watch --open
 ```
 
 本地服务跑起来之后，Jekyll 会自动创建`_site/`目录，把`blog/`目录内__不是__以下划线开头的文件（夹）全部 Copy 进来，Markdown 文件也会编译成 HTML。
@@ -106,13 +106,13 @@ $ j watch --open
 我喜欢 [Sass](http://sass-lang.com)，所以{{ jekyll_cli }}也就有了这个功能。命令就是：
 
 ```bash
-$ j sass
+$ jkl sass
 ```
 
 设计博客外观的时候，Sass 文件频繁改动，希望能自动执行编译操作，使用：
 
 ```bash
-$ j sass --watch
+$ jkl sass --watch
 ```
 
 编译时使用的参数，可以在`_config.yml`中设置，具体有哪些参数可用，可以在终端执行`compass help compile`查看。写在`_config.yml`内的参数的格式跟终端显示的有一些区别，就是：去掉`--`前缀，然后把连字符`-`改成下划线`_`，如果没有参数值的，用布尔值`true`跟`false`代替。
@@ -122,7 +122,7 @@ $ j sass --watch
 在 GitHub 上新建一个仓库，然后在终端执行：
 
 ```bash
-$ j git
+$ jkl git
 ```
 
 终端会提示你输入具有读写权限的仓库地址，示例地址见下图：
@@ -132,16 +132,16 @@ $ j git
 ## 部署
 
 ```bash
-$ j deploy
+$ jkl deploy
 ```
 
 该命令会将`blog/`目录内的文件（夹）push 到你刚刚创建的仓库中。本地预览时生成的`_site/`目录是不需要的，建议写进`.gitignore`。
 
 ### 写在最后
 
-{{ jekyll_cli }}的命令，除了`j new`，其他都需要在`blog/`目录内执行。
+{{ jekyll_cli }}的命令，除了`jkl new`，其他都需要在`blog/`目录内执行。
 
-更多命令可以运行`j -h`查看。列出某个命令所有 options，使用`j [command] -h`，比如`j post -h`。
+更多命令可以运行`jkl -h`查看。列出某个命令所有 options，使用`jkl [command] -h`，比如`jkl post -h`。
 
 本文只是简单介绍，想要更深入的使用 Jekyll，需要你自己看[文档](http://jekyllrb.com/docs/home/)。
 
