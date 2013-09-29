@@ -8,7 +8,7 @@ title: 重装系统之后
 
 > 系统偏好设置 --&gt; 共享
 
-## 安装 [Xcode](http://itunes.apple.com/us/app/xcode/id497799835) &amp; [OSX GCC Installer](https://github.com/kennethreitz/osx-gcc-installer)
+## 安装 [Xcode](https://developer.apple.com/xcode/) &amp; [OSX GCC Installer](https://github.com/kennethreitz/osx-gcc-installer)
 
 ## 安装 [Homebrew](http://brew.sh/)
 
