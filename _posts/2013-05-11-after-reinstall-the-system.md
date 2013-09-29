@@ -133,7 +133,9 @@ __Settings__
   "line_padding_top": 5,
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
-  "trim_trailing_white_space_on_save": true
+  "trim_trailing_white_space_on_save": true,
+  // Remove `-`
+  "word_separators": "./\\()\"':,.;<>~!@#$%^&*|+=[]{}`~?"
 }
 ```
 
