@@ -6,7 +6,7 @@ author: wǒ_is神仙
 name: MrZhang.me
 url: http://mrzhang.me
 permalink: blog/:title.html
-paginate: 5
+paginate: 999
 paginate_path: /page/:num
 excerpt_separator: '<!-- 高端大气上档次，狂拽炫酷屌炸天 -->'
 
