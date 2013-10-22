@@ -12,4 +12,4 @@ title: JWPlayer crashes on iOS6
 .jwplayer { -webkit-overflow-scrolling: auto !important; }
 ```
 
-![](https://raw.github.com/jsw0528/rails_emoji/master/vendor/assets/images/emojis/trollface.png ':trollface:')
+![:trollface:](https://raw.github.com/jsw0528/rails_emoji/master/vendor/assets/images/emojis/trollface.png)
