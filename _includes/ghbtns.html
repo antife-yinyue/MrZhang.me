@@ -1,5 +1,1 @@
-{% for repo in page.ghbtns %}
-  {% capture ghbtns %}{{ ghbtns }}|{% include ghbtns/star.html %}{% include ghbtns/fork.html %}{% endcapture %}
-{% endfor %}
-
-{% assign ghbtns = ghbtns | remove_first: '|' | split: '|' %}
+<iframe src="http://ghbtns.com/github-btn.html?user={{ site.github }}&amp;repo={{ include.repo }}&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe><iframe src="http://ghbtns.com/github-btn.html?user={{ site.github }}&amp;repo={{ include.repo }}&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="82" height="20"></iframe>
