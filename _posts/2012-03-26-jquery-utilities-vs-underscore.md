@@ -66,7 +66,7 @@ console.log( $.grep(arr, fn, true) )
 
 两者都优先使用了ECMAScript 5的原生`indexOf`方法，他们的语法分别是：<br />jQuery：`$.inArray(value, array, [fromIndex])`<br />Underscore：`_.indexOf(array, value, [isSorted])`
 
-可见，除了value和array的位置不一样外，第三个参数也是不一样的。前者的`fromIndex`的是用于指定遍历的起始索引，后者的`isSorted`的是用于开启[二分查找法](http://baike.baidu.com/view/1195050.htm)功能。Underscore还有个相关的`_.lastIndexOf()`。
+可见，除了value和array的位置不一样外，第三个参数也是不一样的。前者的`fromIndex`的是用于指定遍历的起始索引，后者的`isSorted`的是用于开启[二分查找法][]功能。Underscore还有个相关的`_.lastIndexOf()`。
 
 ## $.isArray() vs _.isArray()
 
@@ -157,3 +157,6 @@ console.log( $.merge([1, 2, 3], [101, 2, 1, 10]) )
 console.log( _.union([1, 2, 3], [101, 2, 1, 10], [2, 1]) )
 //=> [1, 2, 3, 101, 10]
 ```
+
+
+[二分查找法]: http://baike.baidu.com/view/610605.htm

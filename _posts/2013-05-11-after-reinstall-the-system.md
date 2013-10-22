@@ -8,9 +8,9 @@ title: 重装系统之后
 
 > 系统偏好设置 --&gt; 共享
 
-## 安装 [Xcode](https://developer.apple.com/xcode/) &amp; [OSX GCC Installer](https://github.com/kennethreitz/osx-gcc-installer)
+## 安装 [Xcode][] &amp; [OSX GCC Installer][]
 
-## 安装 [Homebrew](http://brew.sh/)
+## 安装 [Homebrew][]
 
 ```
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
@@ -32,19 +32,19 @@ ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
 
 {{ site.excerpt_separator }}
 
-## 安装 [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+## 安装 [oh-my-zsh][]
 
 ```
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 ```
 
-## 安装 [RVM](https://rvm.io/) &amp; [Ruby](http://www.ruby-lang.org/)
+## 安装 [RVM][] &amp; [Ruby][]
 
 ```
 curl -L https://get.rvm.io | bash -s stable --autolibs=enabled --ruby=1.9.3
 ```
 
-## 安装 [NVM](https://github.com/creationix/nvm) &amp; [NodeJS](http://nodejs.org/)
+## 安装 [NVM][] &amp; [NodeJS][]
 
 ```
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
@@ -64,7 +64,7 @@ nvm install v0.10
 
 ## 编辑 ~/.zshrc
 
-> __plugins=([autojump](https://github.com/joelthelion/autojump#readme) [bundler](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#bundler) [git](http://jasonm23.github.io/oh-my-git-aliases.html) [osx](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#osx) [rails3](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#rails3))__
+> __plugins=([autojump][] [bundler][] [git][] [osx][] [rails3][])__
 
 ```sh
 # Customize to your needs...
@@ -94,7 +94,7 @@ alias pl="powder applog"
 gem: --no-rdoc --no-ri
 ```
 
-## 安装 [Pow](http://pow.cx/)
+## 安装 [Pow][]
 
 ```
 gem install powder
@@ -109,7 +109,7 @@ ssh-keygen -t rsa
 
 <a id="sm"></a>
 
-## [Sublime Text 3](http://www.sublimetext.com/3)
+## [Sublime Text 3][]
 
 __Bin__
 
@@ -117,7 +117,7 @@ __Bin__
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sm
 ```
 
-[__Package Control__](https://sublime.wbond.net/)
+[__Package Control__][]
 
 ```
 import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
@@ -154,6 +154,25 @@ __Key Bindings__
 ]
 ```
 
-__Snippets__ - [Download](https://gist.github.com/jsw0528/5889931/download)
+__Snippets__ - [Download][]
 
 {% gist 5889931 %}
+
+
+[Xcode]: https://developer.apple.com/xcode/
+[OSX GCC Installer]: https://github.com/kennethreitz/osx-gcc-installer
+[Homebrew]: http://brew.sh/
+[oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
+[RVM]: https://rvm.io/
+[Ruby]: http://www.ruby-lang.org/
+[NVM]: https://github.com/creationix/nvm
+[NodeJS]: http://nodejs.org/
+[autojump]: https://github.com/joelthelion/autojump#readme
+[bundler]: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#bundler
+[git]: http://jasonm23.github.io/oh-my-git-aliases.html
+[osx]: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#osx
+[rails3]: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#rails3
+[Pow]: http://pow.cx/
+[Sublime Text 3]: http://www.sublimetext.com/3
+[__Package Control__]: https://sublime.wbond.net/
+[Download]: https://gist.github.com/jsw0528/5889931/download

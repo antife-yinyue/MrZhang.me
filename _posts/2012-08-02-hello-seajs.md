@@ -4,11 +4,9 @@ date: 2012-08-02 13:55:00 +0800
 title: Hello, SeaJS!
 ---
 
-{% assign issues = 'https://github.com/seajs/seajs/issues' %}
-
 不知道这货是啥？那你就 OUT 啦～
 
-SeaJS 是一款适用于 Web 浏览器端的模块加载器，它同时又[与 Node 兼容]({{ issues }}/275)。在 SeaJS 的世界里，一个文件就是一个模块，所有模块都遵循[CMD（Common Module Definition）]({{ issues }}/242)规范。一个模块基本是长这样的：
+SeaJS 是一款适用于 Web 浏览器端的模块加载器，它同时又[与 Node 兼容][275]。在 SeaJS 的世界里，一个文件就是一个模块，所有模块都遵循[CMD（Common Module Definition）][242]规范。一个模块基本是长这样的：
 
 ```js
 define(function(require, exports, module) {
@@ -66,7 +64,7 @@ seajs.use(['./hello', './world'], function(hello, world) {
 
 ## 三、`seajs.config({})`
 
-不能让用户配置的工具都不是好工具。SeaJS 具体有哪些配置项，可以参见[这里]({{ issues }}/262)。
+不能让用户配置的工具都不是好工具。SeaJS 具体有哪些配置项，可以参见[这里][262]。
 
 需要说明的是，`seajs.config`是可以多处调用的，同名 key 覆盖，不同名的 key 则叠加。这样就可以有全局配置和细分配置了。
 
@@ -93,8 +91,13 @@ SeaJS 从 v1.2.0 开始，类似上面 jQuery 的写法可以简化为`{ 'jquery
 - `exports` 用来对外提供接口。
 - `module` 对象存储了与当前模块相关联的一些属性和方法。
 
-更具体的规范介绍，参见[官方文档]({{ issues }}/242)。
+更具体的规范介绍，参见[官方文档][242]。
 
 其他代码你原来怎么写，现在还是怎么写。就这么简单。
 
 最后，恭喜，你已经入门了，尽情享受 SeaJS 吧～
+
+
+[242]: https://github.com/seajs/seajs/issues/242
+[262]: https://github.com/seajs/seajs/issues/262
+[275]: https://github.com/seajs/seajs/issues/275
