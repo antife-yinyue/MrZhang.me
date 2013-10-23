@@ -2,32 +2,27 @@
 layout: post
 date: 2012-03-09 18:15:00 +0800
 title: Blog = GitHub + Octopress
+repo_url: https://github.com/jsw0528/octopress/blob/mrzhang_me/
 ---
 
-{% assign repos_url = 'https://github.com/jsw0528/octopress/blob/mrzhang_me' %}
-{% assign commit_url = 'https://github.com/jsw0528/octopress/commit' %}
-
-最近有些同学让我分享我的博客主题，其实主题早已经放在GitHub上了。下面索性基于[我Fork的Octopress](https://github.com/jsw0528/octopress/tree/mrzhang_me/)，讲一下如何使用Octopress在GitHub上建博客。
-
-先来看看我的版本和原始版本的主要不同之处：
-
-<div class="flash-notice">
-  <div class="info">
-    <strong>2012-04-13:</strong>
-    允许单篇文章独立引用CSS和JS，具体文件内容变动见commit
-    <a href="{{commit_url}}/0aa27bb1ab423dbebd89cf5ffe55f8a5c65d6244#diff-1">0aa27bb</a>
-    和
-    <a href="{{commit_url}}/05fcdbfced318fa9909011d9eb7a33dd0f8792d1#diff-0">05fcdbf</a>。
+<div class="flash-message">
+  <div class="flash-info">
+    <p>我 fork 的 Octopress 已经停止维护了，大家可以转到原生 Jekyll 上来。</p>
+    <p>参考阅读：<a href="{% post_url 2013-03-21-using-jekyll-with-github-pages %}">Using Jekyll with GitHub Pages</a></p>
   </div>
 </div>
 
-1. [.rvmrc]({{ repos_url }}/.rvmrc)<br />改成使用我机子上装的Ruby版本（1.9.3），Octopress最低要求是1.9.2。
-2. [Gemfile]({{ repos_url }}/Gemfile)<br />把源改成ruby.taobao.org，去掉部分gem的版本号限制，咱都用最新的。
-3. [Rakefile]({{ repos_url }}/Rakefile)<br />用haml替换markdown（这个根据自己喜好来，只要是被支持的），时间改成东八区的，降低主题对custom目录的依赖。
-4. [_config.yml]({{ repos_url }}/_config.yml)<br />这里都是一些定制化的配置信息，比如日期格式、永久链接、新浪微博等。
-5. [plugins/sh_js.rb]({{ repos_url }}/plugins/sh_js.rb)<br />[新增] 代码高亮插件，具体介绍看：[Using SHJS for Jekyll](/blog/using-shjs-for-jekyll.html)
-6. [plugins/tag_generator.rb]({{ repos_url }}/plugins/tag_generator.rb)<br />[新增] 其实Jekyll是支持Tag的，只不过Octopress目前没有官方插件支持，所以我自己搞了个，支持中文。
-7. [.themes/blog/]({{ repos_url }}/.themes/blog/)<br />[新增] 这个就是我博客的主题了。
+最近有些同学让我分享我的博客主题，其实主题早已经放在GitHub上了。下面索性基于[我 fork 的 Octopress][]，讲一下如何使用Octopress在GitHub上建博客。
+
+先来看看我的版本和原始版本的主要不同之处：
+
+1. [.rvmrc][]<br />改成使用我机子上装的Ruby版本（1.9.3），Octopress最低要求是1.9.2。
+2. [Gemfile][]<br />把源改成ruby.taobao.org，去掉部分gem的版本号限制，咱都用最新的。
+3. [Rakefile][]<br />用haml替换markdown（这个根据自己喜好来，只要是被支持的），时间改成东八区的，降低主题对custom目录的依赖。
+4. [_config.yml][]<br />这里都是一些定制化的配置信息，比如日期格式、永久链接、新浪微博等。
+5. [plugins/sh_js.rb][]<br />[新增] 代码高亮插件，具体介绍看：[Using SHJS for Jekyll][]。
+6. [plugins/tag_generator.rb][]<br />[新增] 其实Jekyll是支持Tag的，只不过Octopress目前没有官方插件支持，所以我自己搞了个，支持中文。
+7. [.themes/blog/][]<br />[新增] 这个就是我博客的主题了。
 
 **OK，现在让我们正式开始。**
 
@@ -35,9 +30,9 @@ title: Blog = GitHub + Octopress
 
 ## Step1 - 在本机安装Octopress
 
-首先，必须先在本机安装配置[Git](http://help.github.com/mac-set-up-git)和[Ruby](http://www.ruby-lang.org)，然后就是把Octopress源码从GitHub上拉下来：
+首先，必须先在本机安装配置 [Git][] 和 [Ruby][]，然后就是把Octopress源码从GitHub上拉下来：
 
-```bash
+```sh
 $ git clone git://github.com/jsw0528/octopress.git
 ```
 
@@ -54,7 +49,7 @@ Resolving deltas: 100% (2341/2341), done.
 
 现在源码已经在你机子上了，继续：
 
-```bash
+```sh
 $ cd octopress
 $ bundle install
 ```
@@ -63,16 +58,16 @@ $ bundle install
 
 ## Step2 - 安装主题
 
-由于我博客的主题以`submodule`的方式引入了我们前端团队的[基础样式库](https://github.com/eDoctor/eDr_assets_Sass)，所以需要进行下面两步，把样式库的文件全部拉下来：
+由于我博客的主题以`submodule`的方式引入了我们前端团队的[基础样式库][]，所以需要进行下面两步，把样式库的文件全部拉下来：
 
-```bash
+```sh
 $ git submodule init
 $ git submodule update
 ```
 
 现在可以安装主题了，`blog`是主题名称。其实这步就是把`.themes/blog/`内的两个目录复制到项目根目录。
 
-```bash
+```sh
 $ rake install['blog']
 ```
 
@@ -87,7 +82,7 @@ $ rake install['blog']
 
 完成上述准备工作后，运行：
 
-```bash
+```sh
 $ rake setup_github_pages
 ```
 
@@ -101,7 +96,7 @@ $ rake setup_github_pages
 
 数据备份很重要，我们可以把文章备份到另一个分支，比如`store`。在安装完主题后，系统会自动创建一个空目录`source/_posts`，以后创建的文章都会保存在这个目录内。我们先定位到该目录，然后初始化git（建议新开一个终端窗口，省得不停地切换目录）：
 
-```bash
+```sh
 $ cd source/_posts/
 $ git init
 $ touch README.md
@@ -112,13 +107,13 @@ $ git remote add origin git@github.com:[Username]/[Repository].git
 
 commit即可，无需push，因为我们重点是要新建`store`分支。接下来我们创建并切换到`store`：
 
-```bash
+```sh
 $ git checkout -b store
 ```
 
 回到刚才的窗口，继续下面的步骤。
 
-git入门，推荐看下[这篇文章](http://rogerdudler.github.com/git-guide/index.zh.html)，小清新风格。当然，你也可以使用[GitHub for Mac](http://mac.github.com)，备份的准备步骤如下：
+git入门，推荐看下[这篇文章][git-guide]，小清新风格。当然，你也可以使用[GitHub for Mac][]，备份的准备步骤如下：
 
 1. 把`source/_posts`目录拖到仓库列表界面的左下角，在弹出新建空仓库的确认框后点「Yes」；
 2. 双击进入这个仓库，切换到「Settings」项，填入`git@github.com:[Username]/[Repository].git`后点「Update Remote」；
@@ -131,7 +126,7 @@ git入门，推荐看下[这篇文章](http://rogerdudler.github.com/git-guide/i
 
 码字时，我们可以先在本地起一个服务，预览无误后再部署。新开一个终端窗口（保证定位到项目根目录），运行：
 
-```bash
+```sh
 $ rake preview
 ```
 
@@ -139,7 +134,7 @@ $ rake preview
 
 创建文章：
 
-```bash
+```sh
 $ rake new_post['Hello World']
 ```
 
@@ -147,7 +142,7 @@ $ rake new_post['Hello World']
 
 如果你对`.themes/blog`内的主题文件做了改动，可以运行下面的命令更新：
 
-```bash
+```sh
 $ rake update_source['blog']
 $ rake update_style['blog']
 ```
@@ -156,7 +151,7 @@ $ rake update_style['blog']
 
 先把整个项目静态化，然后再部署到GitHub：
 
-```bash
+```sh
 $ rake generate
 $ rake deploy
 ```
@@ -169,7 +164,7 @@ $ rake deploy
 
 回到`source/_posts`目录内，运行下面的命令把文章备份到GitHub上：
 
-```bash
+```sh
 $ git add *.haml
 $ git commit -m 'backup posts'
 $ git push origin store
@@ -178,3 +173,21 @@ $ git push origin store
 到此结束，希望对你有帮助。
 
 放弃臃肿的WP，投入Octopress的怀抱吧～ 像黑客一样写博客！
+
+
+[我 fork 的 Octopress]: {{ page.repo_url | replace: 'blob', 'tree' }}
+[Using SHJS for Jekyll]: {% post_url 2012-02-02-using-shjs-for-jekyll %}
+
+[.rvmrc]: {{ page.repo_url }}.rvmrc
+[Gemfile]: {{ page.repo_url }}Gemfile
+[Rakefile]: {{ page.repo_url }}Rakefile
+[_config.yml]: {{ page.repo_url }}_config.yml
+[plugins/sh_js.rb]: {{ page.repo_url }}plugins/sh_js.rb
+[plugins/tag_generator.rb]: {{ page.repo_url }}plugins/tag_generator.rb
+[.themes/blog/]: {{ page.repo_url }}.themes/blog/
+
+[Git]: http://help.github.com/mac-set-up-git
+[Ruby]: http://www.ruby-lang.org
+[git-guide]: http://rogerdudler.github.com/git-guide/index.zh.html
+[基础样式库]: https://github.com/eDoctor/eDr_assets_Sass
+[GitHub for Mac]: http://mac.github.com

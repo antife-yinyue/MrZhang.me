@@ -262,10 +262,19 @@ blockquote {
 }
 
 @import 'highlight';
+@import '../../../works/edr-assets/scss/_base2/ui-flashes';
 
 // Gist
 .gist .gist-file {
   .gist-data, .gist-syntax {
     background: nth($pre-colors, 2) !important;
+  }
+}
+
+.flash-message {
+  position: static;
+  text-align: left;
+  > div {
+    display: block;
   }
 }
