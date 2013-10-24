@@ -8,7 +8,9 @@ title: 重装系统之后
 
 > 系统偏好设置 --&gt; 共享
 
-## 安装 [Xcode][] &amp; [OSX GCC Installer][]
+## 安装 [Xcode][]
+
+> OS X 10.9 以后不再需要 Command Line Tools 或者 [GCC][] 了。
 
 ## 安装 [Homebrew][]
 
@@ -97,8 +99,7 @@ gem: --no-rdoc --no-ri
 ## 安装 [Pow][]
 
 ```
-gem install powder
-powder install
+curl get.pow.cx | sh
 ```
 
 ## SSH-KeyGen
@@ -160,7 +161,7 @@ __Snippets__ - [Download][]
 
 
 [Xcode]: https://developer.apple.com/xcode/
-[OSX GCC Installer]: https://github.com/kennethreitz/osx-gcc-installer
+[GCC]: https://github.com/kennethreitz/osx-gcc-installer
 [Homebrew]: http://brew.sh/
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [RVM]: https://rvm.io/
