@@ -1,0 +1,72 @@
+---
+layout: nil
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Price Trend · {{ site.name }}</title>
+    <script src="http://cdn.staticfile.org/Chart.js/0.2.0/Chart.min.js"></script>
+  </head>
+
+  <body>
+    <h2>MacBook Pro（ME 293）</h2>
+    <canvas id="mbp" width="1800" height="200"></canvas>
+    <h2>iPad Air（LTE，32G，白）</h2>
+    <canvas id="ipadAir" width="1800" height="200"></canvas>
+    <p>数据来源：<a href="http://appled.cc/history.html">http://appled.cc/</a></p>
+
+    <script>
+    var data = {
+      mbp: [
+        // Nov
+        12400, 12360, 12170, 12060, 12000, 11950, 11950, 11950, 11900, 11900,
+        11850, 11900, 11740, 11700, 11700, 11750, 11740, 11670, 11600, 11450,
+        11400, 11400, 11400, 11430, 11430, 11400, 11380, 11350, 11320, 11320,
+        // Dec
+        11300, 11300, 11300, 11300, 11280, 11280, 11270, 11200
+      ],
+      ipadAir: [
+        // Nov
+        4720, 4680, 4630, 4670, 4660, 4670, 4660, 4660, 4650, 4650,
+        4660, 4710, 4730, 4750, 4800, 4830, 4800, 4790, 4730, 4730,
+        4690, 4630, 4670, 4600, 4520, 4520, 4500, 4490, 4460, 4380,
+        // Dec
+        4360, 4340, 4330, 4280, 4300, 4280, 4280, 3980
+      ]
+    }
+
+    var dates = [], i, l
+    for (i = 1; i <= 30; i++) {
+      dates.push('11.' + i)
+    }
+    for (i = 1, l = data.mbp.length - 30; i <= l; i++) {
+      dates.push('12.' + i)
+    }
+
+    Object.keys(data).forEach(function(k) {
+      new Chart(document.getElementById(k).getContext('2d')).Line({
+        labels: dates,
+        datasets: [{
+          fillColor: 'rgba(151, 187, 205, 0.5)',
+          strokeColor: 'rgba(151, 187, 205, 1)',
+          pointColor: 'rgba(151, 187, 205, 1)',
+          pointStrokeColor: '#fff',
+          data: data[k]
+        }]
+      })
+    })
+
+    // var xhr = new XMLHttpRequest()
+    // xhr.open('GET', '')
+    // xhr.onreadystatechange = function() {
+    //   if (xhr.readyState === 4 && xhr.status === 200) {
+    //     console.log(xhr.responseText)
+    //   }
+    // }
+    // xhr.send()
+    </script>
+  </body>
+</html>
