@@ -15,7 +15,7 @@ title: 重装系统之后
 ## 安装 [Homebrew][]
 
 ```
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 ```
 
 ### 安装 Git, MongoDB, MySQL &amp; Autojump
