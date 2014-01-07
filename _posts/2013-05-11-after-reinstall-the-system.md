@@ -10,18 +10,18 @@ title: 重装系统之后
 
 ## 安装 [Xcode][]
 
-> OS X 10.9 以后不再需要 Command Line Tools 或者 [GCC][] 了。
-
 ## 安装 [Homebrew][]
 
 ```
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 ```
 
-### 安装 Git, MongoDB, MySQL &amp; Autojump
+> 会提示先安装 Command Line Tools，按提示操作即可。
+
+### 安装 Autojump, Git, MongoDB &amp; MySQL
 
 ```
-brew install git mongodb mysql autojump
+brew install autojump git mongodb mysql
 ```
 
 设置开机自启动「可选」：
@@ -37,20 +37,23 @@ ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
 ## 安装 [oh-my-zsh][]
 
 ```
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 ```
 
 ## 安装 [RVM][] &amp; [Ruby][]
 
 ```
-curl -L https://get.rvm.io | bash -s stable --autolibs=enabled --ruby=1.9.3
+curl -sSL https://get.rvm.io | bash --ruby=1.9.3
 ```
+
+> OS X 10.9 自带 Ruby 2.0
 
 ## 安装 [NVM][] &amp; [NodeJS][]
 
 ```
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 nvm install v0.10
+nvm alias default 0.10
 ```
 
 ## 编辑 /etc/paths
@@ -66,7 +69,7 @@ nvm install v0.10
 
 ## 编辑 ~/.zshrc
 
-> __plugins=([autojump][] [bundler][] [git][] [osx][] [rails3][])__
+> __plugins=([autojump][] [git][] [osx][])__
 
 ```sh
 # Customize to your needs...
@@ -161,7 +164,6 @@ __Snippets__ - [Download][]
 
 
 [Xcode]: https://developer.apple.com/xcode/
-[GCC]: https://github.com/kennethreitz/osx-gcc-installer
 [Homebrew]: http://brew.sh/
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [RVM]: https://rvm.io/
@@ -169,10 +171,8 @@ __Snippets__ - [Download][]
 [NVM]: https://github.com/creationix/nvm
 [NodeJS]: http://nodejs.org/
 [autojump]: https://github.com/joelthelion/autojump#readme
-[bundler]: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#bundler
 [git]: http://jasonm23.github.io/oh-my-git-aliases.html
 [osx]: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#osx
-[rails3]: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#rails3
 [Pow]: http://pow.cx/
 [Sublime Text 3]: http://www.sublimetext.com/3
 [__Package Control__]: https://sublime.wbond.net/
