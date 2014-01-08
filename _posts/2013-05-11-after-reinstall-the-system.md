@@ -126,16 +126,12 @@ ssh-keygen -t rsa
 
 ## [Sublime Text 3][]
 
+[__Package Control__][]
+
 __Bin__
 
 ```
 ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sm
-```
-
-[__Package Control__][]
-
-```
-import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 ```
 
 __Settings__
@@ -186,5 +182,5 @@ __Snippets__ - [Download][]
 [osx]: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#osx
 [Pow]: http://pow.cx/
 [Sublime Text 3]: http://www.sublimetext.com/3
-[__Package Control__]: https://sublime.wbond.net/
+[__Package Control__]: https://sublime.wbond.net/installation
 [Download]: https://gist.github.com/jsw0528/5889931/download
