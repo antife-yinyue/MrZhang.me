@@ -65,7 +65,7 @@ eval "$(rbenv init -)"
 rbenv install -l     # list all available versions
 rbenv install 2.1.0  # install a Ruby version
 rbenv global 2.1.0   # set the global version
-rbenv versions       # list all Ruby versions
+rbenv versions       # list all installed Ruby versions
 ```
 
 ## 安装 MongoDB, MySQL
