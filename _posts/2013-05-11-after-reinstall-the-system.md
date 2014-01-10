@@ -29,10 +29,49 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 > 会提示先安装 Command Line Tools，按提示操作即可。
 
-### 安装 Autojump, Git, MongoDB &amp; MySQL
+{{ site.excerpt_separator }}
+
+## 安装 git, [autojump][]
 
 ```
-brew install autojump git mongodb mysql
+brew install git autojump
+```
+
+## 安装 [oh-my-zsh][]
+
+```
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+```
+
+> __plugins=(autojump [git][] [osx][])__
+
+## 安装 [rbenv][]
+
+```
+brew install rbenv ruby-build rbenv-gemset
+```
+
+在`~/.zshrc`中添加：
+
+```
+eval "$(rbenv init -)"
+```
+
+## 安装 Ruby
+
+> OS X 10.9 自带 Ruby 2.0
+
+```
+rbenv install -l     # list all available versions
+rbenv install 2.1.0  # install a Ruby version
+rbenv global 2.1.0   # set the global version
+rbenv versions       # list all Ruby versions
+```
+
+## 安装 MongoDB, MySQL
+
+```
+brew install mongodb mysql
 ```
 
 设置开机自启动「可选」：
@@ -43,26 +82,22 @@ ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
 ```
 
-{{ site.excerpt_separator }}
-
-## 安装 [oh-my-zsh][]
-
-```
-curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-```
-
-## 安装 [RVM][] &amp; [Ruby][]
-
-```
-curl -sSL https://get.rvm.io | bash --ruby=1.9.3
-```
-
-> OS X 10.9 自带 Ruby 2.0
-
-## 安装 [NVM][] &amp; [NodeJS][]
+## 安装 [NVM][]
 
 ```
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+```
+
+在`~/.zshrc`中添加：
+
+```
+[[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh"
+export NODE_PATH=$NVM_DIR/$(nvm_ls current)/lib/node_modules
+```
+
+## 安装 [NodeJS][]
+
+```
 nvm install v0.10
 nvm alias default 0.10
 ```
@@ -76,25 +111,6 @@ nvm alias default 0.10
 /usr/sbin
 /bin
 /sbin
-```
-
-## 编辑 ~/.zshrc
-
-> __plugins=([autojump][] [git][] [osx][])__
-
-```sh
-# Customize to your needs...
-PATH=$PATH:$HOME/.rvm/bin
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-[[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh"
-
-export NODE_PATH=$NVM_DIR/$(nvm_ls current)/lib/node_modules
-
-alias ls="ls -lap"
-alias pr="powder restart"
-alias po="powder open"
-alias pl="powder applog"
 ```
 
 ## 编辑 ~/.gemrc
@@ -172,14 +188,13 @@ __Snippets__ - [Download][]
 
 [Xcode]: https://developer.apple.com/xcode/
 [Homebrew]: http://brew.sh/
+[autojump]: https://github.com/joelthelion/autojump
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
-[RVM]: https://rvm.io/
-[Ruby]: http://www.ruby-lang.org/
-[NVM]: https://github.com/creationix/nvm
-[NodeJS]: http://nodejs.org/
-[autojump]: https://github.com/joelthelion/autojump#readme
 [git]: http://jasonm23.github.io/oh-my-git-aliases.html
 [osx]: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#osx
+[rbenv]: https://github.com/sstephenson/rbenv
+[NVM]: https://github.com/creationix/nvm
+[NodeJS]: http://nodejs.org/
 [Pow]: http://pow.cx/
 [Sublime Text 3]: http://www.sublimetext.com/3
 [__Package Control__]: https://sublime.wbond.net/installation
