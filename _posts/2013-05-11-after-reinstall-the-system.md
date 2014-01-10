@@ -95,7 +95,7 @@ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 export NODE_PATH=$NVM_DIR/$(nvm_ls current)/lib/node_modules
 ```
 
-## 安装 [NodeJS][]
+## 安装 NodeJS
 
 ```
 nvm install v0.10
@@ -194,7 +194,6 @@ __Snippets__ - [Download][]
 [osx]: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#osx
 [rbenv]: https://github.com/sstephenson/rbenv
 [NVM]: https://github.com/creationix/nvm
-[NodeJS]: http://nodejs.org/
 [Pow]: http://pow.cx/
 [Sublime Text 3]: http://www.sublimetext.com/3
 [__Package Control__]: https://sublime.wbond.net/installation
