@@ -120,10 +120,10 @@ nvm alias default 0.10
 :benchmark: false
 :bulk_threshold: 1000
 :sources:
-- http://ruby.taobao.org/
+- http://ruby.taobao.org
 :update_sources: true
 :verbose: true
-gem: --no-rdoc --no-ri
+gem: --no-document --prerelease
 ```
 
 ## 安装 [Pow][]
