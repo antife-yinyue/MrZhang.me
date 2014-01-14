@@ -28,6 +28,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 ```
 
 > 会提示先安装 Command Line Tools，按提示操作即可。
+> 或者也可以预先手动执行`xcode-select --install`安装。
 
 {{ site.excerpt_separator }}
 
