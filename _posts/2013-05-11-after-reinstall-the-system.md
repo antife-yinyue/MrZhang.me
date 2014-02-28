@@ -192,7 +192,7 @@ __Snippets__ - [Download][]
 [autojump]: https://github.com/joelthelion/autojump
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [git]: http://jasonm23.github.io/oh-my-git-aliases.html
-[osx]: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#osx
+[osx]: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#wiki-osx
 [rbenv]: https://github.com/sstephenson/rbenv
 [NVM]: https://github.com/creationix/nvm
 [Pow]: http://pow.cx/
