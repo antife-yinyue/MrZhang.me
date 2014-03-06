@@ -83,6 +83,8 @@ ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
 ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
 ```
 
+<a id="nodejs"></a>
+
 ## 安装 [NVM][]
 
 ```
