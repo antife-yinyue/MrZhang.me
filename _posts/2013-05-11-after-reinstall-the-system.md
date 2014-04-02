@@ -157,14 +157,17 @@ __Settings__
 
 ```js
 {
-  "ensure_newline_at_eof_on_save": true,
   "font_size": 20.0,
   "highlight_line": true,
   "line_padding_top": 5,
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
   "trim_trailing_white_space_on_save": true,
-  // Remove `-`
+  "trim_automatic_white_space": false,
+  "ensure_newline_at_eof_on_save": true,
+  "default_line_ending": "unix",
+  "show_encoding": true,
+  "open_files_in_new_window": false,
   "word_separators": "./\\()\"':,.;<>~!@#$%^&*|+=[]{}`~?"
 }
 ```
