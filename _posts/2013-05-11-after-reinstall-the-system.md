@@ -64,8 +64,8 @@ eval "$(rbenv init -)"
 
 ```
 rbenv install -l     # list all available versions
-rbenv install 2.1.0  # install a Ruby version
-rbenv global 2.1.0   # set the global version
+rbenv install 2.1.2  # install a Ruby version
+rbenv global 2.1.2   # set the global version
 rbenv versions       # list all installed Ruby versions
 ```
 
@@ -157,17 +157,19 @@ __Settings__
 
 ```js
 {
-  "font_size": 20.0,
+  "default_line_ending": "unix",
+  "ensure_newline_at_eof_on_save": true,
+  "file_exclude_patterns": [".DS_Store", "*.zip"],
+  "folder_exclude_patterns": [".git"],
+  "font_size": 20,
   "highlight_line": true,
   "line_padding_top": 5,
+  "open_files_in_new_window": false,
+  "show_encoding": true,
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
-  "trim_trailing_white_space_on_save": true,
   "trim_automatic_white_space": false,
-  "ensure_newline_at_eof_on_save": true,
-  "default_line_ending": "unix",
-  "show_encoding": true,
-  "open_files_in_new_window": false,
+  "trim_trailing_white_space_on_save": true,
   "word_separators": "./\\()\"':,.;<>~!@#$%^&*|+=[]{}`~?"
 }
 ```
