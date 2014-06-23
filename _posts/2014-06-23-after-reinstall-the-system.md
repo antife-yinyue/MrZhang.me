@@ -85,11 +85,6 @@ $ nvm alias default 0.10
 
 ```sh
 $ brew install rbenv ruby-build rbenv-gemset
-```
-
-在 `~/.zshrc` 中添加：
-
-```sh
 $ echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 ```
 
