@@ -62,7 +62,7 @@ $ curl -L http://install.ohmyz.sh | sh
 ## 安装 [nvm][]
 
 ```sh
-$ curl https://raw.githubusercontent.com/creationix/nvm/v0.8.0/install.sh | sh
+$ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | sh
 ```
 
 在 `~/.zshrc` 中添加：
