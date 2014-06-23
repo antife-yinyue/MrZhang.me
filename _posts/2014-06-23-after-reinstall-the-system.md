@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2014-06-23 18:26:41 +0800
+date: 2014-06-23 18:47:15 +0800
 title: 重装系统之后
 ---
 
@@ -65,7 +65,7 @@ $ curl -L http://install.ohmyz.sh | sh
 $ curl https://raw.githubusercontent.com/creationix/nvm/v0.8.0/install.sh | sh
 ```
 
-在`~/.zshrc`中添加：
+在 `~/.zshrc` 中添加：
 
 ```
 export NVM_NODEJS_ORG_MIRROR="http://npm.taobao.org/dist"
@@ -87,7 +87,7 @@ $ nvm alias default 0.10
 $ brew install rbenv ruby-build rbenv-gemset
 ```
 
-在`~/.zshrc`中添加：
+在 `~/.zshrc` 中添加：
 
 ```sh
 $ echo 'eval "$(rbenv init -)"' >> ~/.zshrc
@@ -156,7 +156,7 @@ __Settings__
   "default_line_ending": "unix",
   "ensure_newline_at_eof_on_save": true,
   "file_exclude_patterns": [".DS_Store", "*.zip"],
-  "folder_exclude_patterns": [".git"],
+  "folder_exclude_patterns": [".git", ".svn"],
   "font_size": 20,
   "highlight_line": true,
   "line_padding_top": 5,
@@ -194,7 +194,7 @@ __Snippets__ - [Download][]
 [Homebrew]: http://brew.sh/
 [autojump]: https://github.com/joelthelion/autojump
 [Oh My Zsh]: http://ohmyz.sh/
-[osx]: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#wiki-osx
+[git]: http://jasonm23.github.io/oh-my-git-aliases.html
 [rbenv]: https://github.com/sstephenson/rbenv
 [nvm]: https://github.com/creationix/nvm
 [Pow]: http://pow.cx/
