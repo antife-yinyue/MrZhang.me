@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2014-06-23 18:47:15 +0800
+date: 2014-06-23 18:26:41 +0800
 title: 重装系统之后
 ---
 
@@ -35,7 +35,7 @@ title: 重装系统之后
 ## 安装 [Homebrew][]
 
 ```sh
-$ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/homebrew/go/install)"
 ```
 
 > 会提示先安装 Command Line Tools，按提示操作即可。
@@ -151,7 +151,7 @@ $ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/loc
 
 __Settings__
 
-```js
+```json
 {
   "default_line_ending": "unix",
   "ensure_newline_at_eof_on_save": true,
@@ -172,7 +172,7 @@ __Settings__
 
 __Key Bindings__
 
-```js
+```json
 [
   // Add folder to project
   { "keys": ["super+shift+o"], "command": "prompt_add_folder" },
