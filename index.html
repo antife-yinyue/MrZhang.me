@@ -4,24 +4,14 @@ title: Welcome to
 isHome: true
 ---
 
-{% for post in paginator.posts %}
-<article class="entry">
-  <header>
-    <h1 class="entry-title">
-      <a href="{{ post.url }}" target="_self">{{ post.title }}</a>
-    </h1>
-    <p class="entry-meta">
-      <time class="iconfont-time">{{ post.date | date: '%Y/%m/%d %A' }}</time>
-    </p>
-  </header>
+<p>菩提本無樹</p>
+<p>Puti is not a tree</p>
 
-  {% assign fragments = post.content | split: site.excerpt_separator %}
-  {% assign size = fragments | size %}
+<p>明鏡亦非臺</p>
+<p>Mirror is not a table</p>
 
-  {{ fragments | first }}
+<p>本來無一物</p>
+<p>It is empty at all here</p>
 
-  {% if size > 1 %}<p class="read-more"><a href="{{ post.url }}" target="_self">阅读全文 &rarr;</a></p>{% endif %}
-</article>
-{% endfor %}
-
-{% include pagination.html %}
+<p>何處惹塵埃</p>
+<p>Why PM2.5 is so high</p>
